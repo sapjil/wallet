@@ -2,8 +2,8 @@ module.exports = {
   root: true,
   env: { browser: true, es2020: true, node: true, commonjs: true },
   extends: [
-    'eslint:recommended',
-    'plugin:react/recommended',
+    // 'eslint:recommended',  'React' is defined but never used 에러 대응
+    // 'plugin:react/recommended',  'React' is defined but never used 에러 대응
     'plugin:react/jsx-runtime',
     'plugin:react-hooks/recommended',
     'plugin:prettier/recommended',
