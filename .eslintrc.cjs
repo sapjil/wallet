@@ -2,8 +2,8 @@ module.exports = {
   root: true,
   env: { browser: true, es2020: true, node: true, commonjs: true },
   extends: [
-    // 'eslint:recommended', // 'React' is defined but never used 에러 대응
-    // 'plugin:react/recommended', // 'React' is defined but never used 에러 대응
+    'eslint:recommended', // 'React' is defined but never used 에러 대응
+    'plugin:react/recommended', // 'React' is defined but never used 에러 대응
     'plugin:react/jsx-runtime',
     'plugin:react-hooks/recommended',
     'plugin:prettier/recommended',
@@ -15,7 +15,7 @@ module.exports = {
   rules: {
     quotes: ['error', 'single'], // 문자열 들을 단일 따옴표로 감싸도록 강제
     'react-refresh/only-export-components': ['warn', { allowConstantExport: true }],
-    'no-console': 'warn',
+    'no-console': 'error',
     'simple-import-sort/imports': [
       'error',
       {
