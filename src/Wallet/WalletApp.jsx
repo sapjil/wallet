@@ -1,11 +1,11 @@
-import React from 'react';
 import WalletList from 'src/Wallet/WalletList';
 import WalletWrite from 'src/Wallet/WalletWrite';
 
 const WalletApp = () => {
+  // console.log('cc');
   return (
     <>
-      <div>zz</div>
+      <div>Today</div>
       <WalletList />
       <WalletWrite />
     </>
