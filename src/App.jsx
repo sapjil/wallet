@@ -1,9 +1,11 @@
+import WalletApp from './Wallet/WalletApp';
+
 import './App.scss';
 
 function App() {
   return (
     <>
-      <div></div>
+      <WalletApp />
     </>
   );
 }
