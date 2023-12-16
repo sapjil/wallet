@@ -13,10 +13,16 @@
     "preview": "vite preview",
     "prepare": "husky install"
   },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged",
+      "commit-msg": "commitlint -c .commitlintrc.json -E HUSKY_GIT_PARAMS"
+    }
+  },
   "lint-staged": {
     "*.{js,jsx}": [
       "eslint",
-      "prettier --list-different"
+      "prettier --list-different --ignore-path ./.prettierignore --write"
     ]
   },
   "dependencies": {
