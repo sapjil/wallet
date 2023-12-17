@@ -5,11 +5,12 @@
   "type": "module",
   "scripts": {
     "postinstall": "husky install",
-    "format": "prettier --cache --write .",
+    "format": "prettier --cache --write ./src/",
+    "format:full": "prettier --list-different --ignore-path ./.prettierignore --cache --write ./src/",
     "dev": "vite",
     "start": "vite",
     "build": "vite build",
-    "lint": "eslint --cache . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
+    "lint": "eslint --cache ./src/ --ext js,jsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
     "prepare": "husky install",
     "release": "standard-version"
@@ -23,7 +24,10 @@
   "lint-staged": {
     "*.{js,jsx}": [
       "eslint",
-      "prettier --list-different --ignore-path ./.prettierignore --write"
+      "prettier --list-different --ignore-path ./.prettierignore --cache --write ./src/"
+    ],
+    "*.{md,json}": [
+      "prettier --write ."
     ]
   },
   "dependencies": {
