@@ -1,8 +1,6 @@
 import { useEffect, useState } from 'react';
 
-const TodoWrite = (props) => {
-  const setViewContent = props;
-
+const TodoWrite = (setViewContent) => {
   const [title, setTitle] = useState('');
   const [pay, setPay] = useState('');
   const [date, setDate] = useState('');
