@@ -1,11 +1,13 @@
-import WalletApp from './Wallet/WalletApp';
+import TodoApp from './Todo/TodoApp';
 
+// import WalletApp from './Wallet/WalletApp';
 import './App.scss';
 
 function App() {
   return (
     <>
-      <WalletApp />
+      {/* <WalletApp /> */}
+      <TodoApp />
     </>
   );
 }
