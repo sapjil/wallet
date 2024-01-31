@@ -49,19 +49,21 @@ const TodoList = () => {
         {todoList.length === 0 && <p className="center">NO DATA</p>}
         {todoList.map((item, idx) => (
           <div className="list-item" key={idx}>
-            <span className="item-date">{item.date}</span>
-            <br />
+            <div className="item-date">{item.date}</div>
             <div className="flex item-wrap">
               <span className="item-title">{item.title}</span>
               <span className="item-pay">{item.pay}</span>
             </div>
-            <button onClick={(e) => deleteTodo(e, idx)}>삭제</button>
+            <div className="item-util">
+              <button onClick={(e) => deleteTodo(e, idx)}>수정</button>
+              <button onClick={(e) => deleteTodo(e, idx)}>삭제</button>
+            </div>
           </div>
         ))}
       </div>
       <div className="footer">
         <div className="align right">
-          <strong className="total">{counting()}</strong>
+          <strong className="item-total">{counting()}원</strong>
         </div>
       </div>
     </div>

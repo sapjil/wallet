@@ -6,7 +6,8 @@ module.exports = {
     'plugin:react/recommended', // 'React' is defined but never used 에러 대응
     'plugin:react/jsx-runtime',
     'plugin:react-hooks/recommended',
-    'plugin:prettier/recommended',
+    'prettier/prettier',
+    // 'plugin:prettier/recommended',
   ],
   ignorePatterns: ['dist', '.eslintrc.cjs'],
   parserOptions: { ecmaVersion: 'latest', sourceType: 'module' },
