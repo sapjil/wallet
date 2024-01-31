@@ -22,9 +22,9 @@ fi
 if read local_ref local_sha remote_ref remote_sha
 then
   echo "현재 푸쉬하는 브랜치는 $local_ref 내부입니다."
-    if [ "$remote_ref" == "$FORBIDDEN_REF_MAIN" ] || [ "$remote_ref" == "$FORBIDDEN_REF_DEV" ]
+    if [ "$remote_ref" == "$FORBIDDEN_REF_MAIN" ]
     then
-        echo "DO NOT PUSH TO MAIN OR DEV"
+        echo "DO NOT PUSH TO MAIN"
         exit 1 # 금지된 ref 로 push 를 실행하면 에러
     fi
 fi
